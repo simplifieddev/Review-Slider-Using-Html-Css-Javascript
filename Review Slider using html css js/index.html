@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review slider using html css javascript </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="review_container">
+        <h1>
+            Customer Review
+        </h1>
+        <div class="review-box">
+            <div id="slide">
+                <div class="card">
+                    <div class="profile">
+                        <img src="img/first review.jpg" alt="">
+                        <div>
+                            <h3>Ajay</h3>
+                            <p>Front-end Developer</p>
+                        </div>
+                    </div>
+
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores ducimus aliquam
+                        laborum ut! Neque rem maiores sapiente possimus? Facere ad animi, eaque reprehenderit ut
+                        obcaecati eum alias pariatur quod.</p>
+                </div>
+                <div class="card">
+                    <div class="profile">
+                        <img src="img/third review.jpg" alt="">
+                        <div>
+                            <h3>Saurabh </h3>
+                            <p>App Develoer</p>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam exercitationem tempore suscipit
+                        dicta officia quod itaque repudiandae dolore, sit ipsum quia porro!</p>
+                </div>
+                <div class="card">
+                    <div class="profile">
+                        <img src="img/2nd review.jpg" alt="">
+                        <div>
+                            <h3>Deep</h3>
+                            <p>Video Editor</p>
+                        </div>
+                    </div>
+
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores ducimus aliquam
+                        laborum ut! Neque rem maiores sapiente possimus? Facere ad animi, eaque reprehenderit ut
+                        obcaecati eum alias pariatur quod.</p>
+                </div>
+                <div class="card">
+                    <div class="profile">
+                        <img src="img/4th review.jpg" alt="">
+                        <div>
+                            <h3>Saurabh Kumar</h3>
+                            <p>Back-end Develoer</p>
+                        </div>
+                    </div>
+
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores ducimus aliquam
+                        laborum ut! Neque rem maiores sapiente possimus? Facere ad animi, eaque reprehenderit ut
+                        obcaecati eum alias pariatur quod.</p>
+                </div>
+            </div>
+            <div class="sidebar">
+                <img src="img/up-arrow.png" alt="" id="uparrow">
+                <img src="img/down arrow.png" id="downarrow">
+            </div>
+        </div>
+    </div>
+    <script>
+        var slide = document.getElementById("slide");
+        var uparrow = document.getElementById("uparrow");
+        var downarrow = document.getElementById("downarrow");
+        let x = 0;
+        uparrow.onclick = function () {
+            if (x > "-900")
+                x = x - 300
+            slide.style.top = x + "px"
+        }
+        downarrow.onclick = function () {
+            if (x < 0)
+                x = x + 300
+            slide.style.top = x + "px"
+        }
+    </script>
+</body>
+
+</html>

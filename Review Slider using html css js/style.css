@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: fantasy;
+}
+
+.review_container {
+    width: 100%;
+    height: 100vh;
+    background: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font: 600;
+    font-size: 30px;
+    position: absolute;
+    top: 20%;
+}
+
+h1::after {
+    content: '';
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(to right, blue, #a545c0, red);
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+.review-box {
+    width: 90%;
+    max-width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 40px grey;
+    position: relative;
+    top: 20%;
+ overflow: hidden;
+}
+
+.card {
+    height: 300px;
+    padding: 40px;
+    line-height: 22px;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+
+.card::before {
+    content: '';
+    width: 110px;
+    height: 110px;
+    border-bottom-right-radius: 100px;
+    background: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile img {
+    width: 60px;
+    border-radius: 30px;
+    margin-right: 20px;
+    height: 75px;
+}
+
+#slide {
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    transition: 0.5;
+    position: absolute;
+}
+
+.sidebar {
+    width: 60px;
+    height: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background: blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 25px;
+    padding: 5px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+::selection {
+    color: red;
+    background-color: aliceblue;
+}
